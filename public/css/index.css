@@ -1,0 +1,236 @@
+
+.footer_block a:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 33px;
+    padding-bottom: 50px;
+    max-width: 800px;
+}
+.column_block {
+    padding: 10px;  
+    padding: 0px 40px 0 0;
+}
+.column_block_3 {
+    flex: 0 1 calc(33% - 40px);
+}
+.column_block_2 {
+    flex: 0 1 calc(50% - 40px);
+}
+.title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 43px;
+    flex: 1 0 100%;
+}
+.column .column_block_title {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 18px;
+}
+.column .column_block .column_text {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.content {
+    flex: 1 0 100%;
+}
+
+.my-works_block {
+    width: 100%;
+    display: flex;    
+    margin-left: -230px;
+    transition: color 0.5s ease;    
+}
+
+
+
+.content .number {
+    width: 230px;
+    height: 100%;
+}
+.content .number div {
+    width: 64px;
+    height: 58px;
+    padding: 22px 37px 0 130px;  
+    transition: color 0.5s ease;
+    color: #FFFFFF;
+}
+.content .number div, .name_number {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;     
+}
+.name_number {
+    color: #ECEAF3;   
+}
+
+.card {
+    padding: 0 0 45px 0;
+	flex: 0 1 900px
+}
+.content .name {
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 37px 20px 0 0;
+}
+.name_number {
+    display: none;
+}
+.content .text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 100px 0 0;
+    max-width: 800px;
+}
+.content .img {
+    background-image: url('/index/img/mobile_back.png');
+    background-repeat: no-repeat;
+    width: 198px;
+    min-height: 420px;
+    margin: 37px 10px 20px 0;
+}
+.content .img img {
+    width: 189px;
+    margin: 22px 5px;
+}
+
+.card-a {
+    float: left;
+    padding: 0 20px 20px 0;
+    width: 265px;
+}
+.tag {
+    background: #ECEAF3;
+    border-radius: 4px;   
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 0 8px 10px 0;
+}
+
+footer {
+    font-family: 'Roboto';  
+    font-style: normal;  
+    color: #000000;
+    padding: 0px 0 80px 0;
+}
+footer, .content {    
+    padding-left: 230px;
+}
+.footer_block a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+.footer_block div {
+    font-family: 'Roboto';
+    padding: 0px 22px 23px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+
+
+
+.content, .title {
+    border-bottom: 1px solid #00000010;
+}
+
+.content,  footer {
+    border-left: 1px solid #00000010;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 750px) {
+    footer, .content, .content .my-works_block {margin-left: 0;}
+    footer, .content {padding-left: 0;}
+    .lv1 {left: 150px;}
+    .content .number {width: 150px;}
+    .content .number div {padding: 22px 37px 0 60px;}
+    .column {flex-wrap: wrap;}
+    .column_block {padding: 0px 10px 20px 0;}
+    .column_block_3 {flex: 0 1 auto;}
+    .column_block_2 {flex: 0 1 auto;}
+    footer {margin: 50px 0 0 150px;}
+    .left230 {left: 150px;width: calc(100% - 150px);}
+}
+@media (max-width: 600px) {
+    .lv1, .lv2, aside {display: none;}
+    .main {padding-left: 20px}	
+    
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 auto;
+        
+    }
+    title {margin: 0;}
+    .content .my-works_block {flex-direction: column;}
+    .content .number {display: none;}
+    .content .name {
+        padding: 37px 0px 20px 0;
+        display: flex;
+        align-items: center;
+        width: min(480px, 90vw);
+    }
+    .content .text {padding: 0;}
+    .content .img {width: 100%;margin: 0 auto 20px;display: flex;background-position: center;justify-content: center;}
+    footer {margin: 0px 10px;}
+    .my-works_block {width: min(480px, 90vw);}
+    .name_number {
+        display: flex;
+        flex: 0 0 70px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    .my-works_block:hover {
+        background: #FFFFFF;
+    }
+    .content .my-works_block:hover .number div {
+        color: #ECEAF3; 
+    }
+}

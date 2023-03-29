@@ -8,7 +8,7 @@ export type ApiType = {
     sampleApi: () => void;
 };
 
-export type UseMain = () => [
+export type UseCover = () => [
     state: StateType,
     api: ApiType
 ];

@@ -1,0 +1,154 @@
+@import '../../global.modules.scss';
+
+.magic_circle {
+  @media (max-width: 1370px) {
+    right: 20px;  
+    left: auto;
+  }
+
+  @media (max-width: 600px) {
+    top: 75px;
+    transform: scale(0.6);
+    right: -119px;
+    left: auto;
+  }
+
+  position: absolute;
+  top: 71px;
+  left: 750px;
+  z-index: 1;  
+  width: 600px;
+  height: 600px;    
+  .magic_circle_img {
+    transition: all 1s ease-in-out;
+  }
+  .inactive {
+    pointer-events: none;
+  }
+    
+  .ball_1 {
+    position: absolute;left:282px;top:265px;animation: tr_ball_1 6000ms infinite ease-in-out
+  }
+  .ball_2 {
+    position: absolute;left:328px;top:0px;animation: tr_ball_2 6000ms infinite ease-in-out
+  }
+  .ball_3 {
+    position: absolute;left:_30px;top:240px;animation: tr_ball_3 12000ms infinite ease-in-out 100ms
+  }
+  .ball_4 {
+    position: absolute;left:546px;top:360px;animation: tr_ball_4 12000ms infinite ease-in-out 200ms
+  }
+  .ball_5 {
+    position: absolute;left:315px;top:48px;animation: tr_ball_5 12000ms infinite ease-in-out 300ms
+  }
+  .ball_6 {
+    position: absolute;left:285px;top:208px;animation: tr_ball_6 12000ms infinite ease-in-out 1000ms
+  }
+  .cilinder_1 {
+    position: absolute;left:148px;top:25px;animation: tr_cilinder_1 5000ms infinite ease-in-out
+  }
+  .cilinder_2 {
+    position: absolute;left:333px;top:476px;animation: tr_cilinder_2 6000ms infinite ease-in-out 500ms
+  }
+  .circle_1 {
+    position: absolute;left:286px;top:386px;animation: tr_circle_1 3000ms infinite ease-in-out
+  }
+  .cube_1 {
+    position: absolute;left:401px;top:145px;animation: tr_cube_1 6000ms infinite ease-in-out 500ms
+  }
+  .half_ring_1 {
+    position: absolute;left:114px;top:142px;animation: tr_half_ring_1 6000ms infinite ease-in-out 1000ms
+  }
+  .rings_1 {
+    position: absolute;left:116px;top:113px;animation: tr_rings_1 8000ms infinite ease-in-out
+  }
+  .shadow_1 {
+    position: absolute;left:0px;top:145px;animation: tr_shadow_1 3000ms infinite ease-in-out
+  }
+  .square_1 {
+    position: absolute;left:16px;top:230px;animation: tr_square_1 3000ms infinite ease-in-out
+  }
+  .ellipse_1 {
+    animation: ellipse_1 9000ms infinite ease-in-out
+  }
+
+  .twist {
+    animation: twist 10000ms infinite ease-in-out
+  }
+  .shake {
+    animation: shake 15000ms infinite ease-in-out
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes tr_ball_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 50px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_ball_2 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 50px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_ball_3 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 100px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_ball_4 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 100px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_ball_5 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 100px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_ball_6 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 50px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_cilinder_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 30px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_cilinder_2 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 30px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_circle_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 10px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_cube_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 40px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_half_ring_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 20px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_rings_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 50px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_shadow_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 10px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes tr_square_1 {
+0% {transform: translate(0, 0px);} 50% {transform: translate(0, 10px);} 100% {transform: translate(0, 0px);}
+}
+@keyframes ellipse_1 {
+0% {transform: scale(0.98);filter: opacity(90%);} 50% {transform: scale(1);filter: opacity(50%);} 100% {transform: scale(0.98);filter: opacity(90%);}
+}
+
+
+
+
+@keyframes twist {
+0% {transform: rotate(0deg);}
+25% {transform: rotate(5deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(5deg);}
+  100% {transform: rotate(0deg);}
+}
+@keyframes shake {
+0% {transform: translate(0px, 0px);}
+25% {transform: translate(10px, 0px);}
+  50% {transform: translate(0px, 0px);}
+  75% {transform: translate(10px, 0px);}
+  100% {transform: translate(0px, 0px);}
+}

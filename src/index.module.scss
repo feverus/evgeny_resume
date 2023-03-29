@@ -5,11 +5,24 @@ html, body, body>div {
 }
 body {
     background: $main_bg_color;
-    padding: 0%;
+    padding: 0;
     margin: 0;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
+}
+
+a {
+    color:$a_default_color;
+    font-weight: 600;
+	font-size: 1.2em;
+    text-decoration: none;
+    &:hover {
+        color:$a_hover_color;
+    }    
+    &:visited {
+        color:$a_default_color;
+    }
 }

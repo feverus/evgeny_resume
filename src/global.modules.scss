@@ -1,1 +1,35 @@
-$main_bg_color: #dbdbdb;
+$main_bg_color: #F2F3F8;
+$a_default_color: #4030b0;
+$a_hover_color: #736fc3;
+
+
+.inactive {
+  pointer-events: none;
+}
+
+.button {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  padding: 5px 10px;
+  transition: all 100ms ease-in-out;
+}    
+.button div:nth-child(1) {
+  padding: 0 10px 0 0;
+}
+.button:hover {
+  background-color: #4848484d;    
+}
+.button_text {   
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+}

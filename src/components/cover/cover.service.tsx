@@ -4,14 +4,14 @@ import defaultStore from '~/store/defaultStore'
 import {getApi} from '~/api/getApi'
 import {uploadApi} from '~/api/uploadApi'
 import {deleteApi} from '~/api/deleteApi'
-import { UseMain } from './main.props'
+import { UseCover } from './cover.props'
 
-const useMain:UseMain = () => {    
+const useCover:UseCover = () => {    
 
     const [data, setData] = useState<number>(1)
 
     useEffect(() => {
-        console.log('welcome to main')
+        console.log('welcome to cover')
     }, [])
 
     const sampleApi = () => {
@@ -30,4 +30,4 @@ const useMain:UseMain = () => {
         [state, api]
     )
 }
-export default useMain
+export default useCover
