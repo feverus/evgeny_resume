@@ -1,8 +1,8 @@
 import {observer, inject} from "mobx-react";
-import {Main} from './main'
+import {Stack} from './stack'
 
 export default
 	inject('defaultStore')
-	(observer(Main));
+	(observer(Stack));
 
-export type { StateType, ApiType, UseMain } from './main.props'
+export type { StateType, ApiType, UseStack } from './stack.props'

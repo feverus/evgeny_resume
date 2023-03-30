@@ -1,21 +1,59 @@
-import C from './magic_circle.module.scss';
+import C from './magic_circle.module.scss'
+import { useState } from 'react'
+import { MagicCircleItemProps } from './magicCircleItemProps'
 
-export default function Magic_circle() {
-    return <div className={C.magic_circle}>
-        <div className={C.ellipse_1}><img src="/svg/magic_circle/ellipse-1.svg" className={C.magic_circle_img} alt="o" /></div>
-        <div className={C.cube_1}><img src="/svg/magic_circle/cube-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.ball_5}><img src="/svg/magic_circle/ball-5.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-        <div className={C.ball_4}><img src="/svg/magic_circle/ball-4.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-        <div className={C.ball_2}><img src="/svg/magic_circle/ball-2.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-        <div className={C.square_1}><img src="/svg/magic_circle/square-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.circle_1}><img src="/svg/magic_circle/circle-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.half_ring_1}><img src="/svg/magic_circle/half-ring-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.ball_1}><img src="/svg/magic_circle/ball-1.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-        <div className={C.cilinder_2}><img src="/svg/magic_circle/cilinder-2.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.cilinder_1}><img src="/svg/magic_circle/cilinder-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.inactive + ' ' + C.shadow_1}><img src="/svg/magic_circle/shadow-1.svg" className={C.shake} alt="o" /></div>
-        <div className={C.rings_1}><img src="/svg/magic_circle/rings-1.svg" className={C.magic_circle_img + ' ' + C.twist} alt="o" /></div>
-        <div className={C.ball_3}><img src="/svg/magic_circle/ball-3.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-        <div className={C.ball_6}><img src="/svg/magic_circle/ball-3.svg" className={C.magic_circle_img + ' ' + C.shake} alt="o" /></div>
-    </div>;
+const ItemArray = [
+    {name: 'ellipse_1', twist: false, shake: false, active: true},
+    {name: 'cube_1', twist: true, shake: false, active: true},
+    {name: 'ball_5', twist: false, shake: true, active: true},
+    {name: 'ball_4', twist: false, shake: true, active: true},
+    {name: 'ball_2', twist: false, shake: true, active: true},
+    {name: 'square_1', twist: true, shake: false, active: true},
+    {name: 'circle_1', twist: true, shake: false, active: true},
+    {name: 'half_ring_1', twist: true, shake: false, active: true},
+    {name: 'ball_1', twist: false, shake: true, active: true},
+    {name: 'cilinder_2', twist: true, shake: false, active: true},
+    {name: 'cilinder_1', twist: true, shake: false, active: true},
+    {name: 'shadow_1', twist: false, shake: true, active: false},
+    {name: 'rings_1', twist: true, shake: false, active: true},
+    {name: 'ball_3', twist: false, shake: true, active: true},
+    {name: 'ball_3', twist: false, shake: true, active: true, forcedStyle: 'ball_6'},
+]
+
+function MagicCircleItem(props: MagicCircleItemProps) {
+    const [deg, setDeg] = useState(0)
+
+    const changeColor = () => {
+        setDeg(Math.floor(0 + Math.random() * (360 + 1 - 0)))
+    }
+
+    let imgClassName = C.magic_circle_img
+    props.shake && (imgClassName += ' ' + C.shake)
+    props.twist && (imgClassName += ' ' + C.twist)
+
+    let divClassName = C[props.name]
+    props.forcedStyle!==undefined && (divClassName = C[props.forcedStyle])
+    !props.active && (divClassName += ' ' + C.inactive)
+
+    return (
+        <div className = {divClassName}>
+            <img
+                src={`/svg/magic_circle/${props.name}.svg`}
+                className={imgClassName} alt="o" 
+                style = {{filter:`hue-rotate(${deg}deg)`}}
+                onMouseEnter = {changeColor}
+                onTouchStart = {changeColor}
+            />
+        </div>
+    )
+}
+
+export default function MagicCircle() {
+    return (
+        <div className={C.magic_circle}>
+            {ItemArray.map(({name, twist, shake, active, forcedStyle}) => 
+                <MagicCircleItem name={name} forcedStyle={forcedStyle} twist={twist} shake={shake} active={active} key={'MagicCircleItem_' + name + forcedStyle} />
+            )}    
+        </div>
+    )
 }

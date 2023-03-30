@@ -4,14 +4,14 @@ import defaultStore from '~/store/defaultStore'
 import {getApi} from '~/api/getApi'
 import {uploadApi} from '~/api/uploadApi'
 import {deleteApi} from '~/api/deleteApi'
-import { UseMain } from './main.props'
+import { UseStack } from './stack.props'
 
-const useMain:UseMain = () => {    
+const useStack:UseStack = () => {    
 
     const [data, setData] = useState<number>(1)
 
     useEffect(() => {
-        console.log('welcome to main')
+        
     }, [])
 
     const sampleApi = () => {
@@ -30,4 +30,4 @@ const useMain:UseMain = () => {
         [state, api]
     )
 }
-export default useMain
+export default useStack

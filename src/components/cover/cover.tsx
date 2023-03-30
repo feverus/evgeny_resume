@@ -1,8 +1,9 @@
 import defaultStore from '~/store/defaultStore'
-import useMain from "./cover.service";
+import useMain from "./cover.service"
 import C from './cover.module.scss'
-import Magic_circle from '../magic_circle/';
-import { ScrollButton } from '../scrollButton/scrollButton';
+import Magic_circle from '../magic_circle/'
+import { ScrollButton } from '../scrollButton/scrollButton'
+import { scrollTo } from '~/service/scrollTo'
 
 export function Cover() {
 	const [state, api] = useMain() 
@@ -26,12 +27,13 @@ export function Cover() {
             Окончил КАИ им. А.Н.Туполева по специальности информационная безопасность и&nbsp;более 10&nbsp;лет работаю&nbsp;над своими проектами.
             </div>
         </div>
-		<a href="#my-works" className={C.my_works}>
-			<div className={C.button}>
+        <button  
+            className={C.button + ' ' + C.my_works}
+            onClick={() => scrollTo(`my_works`)}
+        >
 				<div className={C.button_text}>Посмотреть работы</div>
 				<div className={C.button_img}><img src="/svg/view_arrow.svg" /></div>
-			</div>
-		</a>
+		</button>
 
         <Magic_circle />
 

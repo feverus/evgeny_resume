@@ -1,6 +1,14 @@
 @import '../../global.modules.scss';
 
+.BUTTON_WITHOUT_STYLE {
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 .to_bottom {
+  @extend .BUTTON_WITHOUT_STYLE;
   position: absolute;
   right: 0;
   bottom: 20px;
@@ -8,10 +16,13 @@
   z-index: 100;	
   .ankor_button_img { 
     transform: rotate(90deg);
+    padding: 0;
+    margin: 0;
   }
 }
 
 .to_top {
+  @extend .BUTTON_WITHOUT_STYLE;
   position: absolute;
   right: 0;
   margin-top: -110px;
@@ -19,6 +30,8 @@
 	z-index: 100;	
   .ankor_button_img { 
     transform: rotate(270deg);
+    padding: 0;
+    margin: 0;
   }
 }
 

@@ -7,7 +7,7 @@ body {
     background: $main_bg_color;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -26,3 +26,4 @@ a {
         color:$a_default_color;
     }
 }
+

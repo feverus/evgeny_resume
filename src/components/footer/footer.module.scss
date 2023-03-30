@@ -1,0 +1,35 @@
+@import '../../global.modules.scss';
+
+footer {
+  @media (max-width: 750px) {
+    margin: 50px 0 0 150px;
+    padding-left: 0;
+  }
+  @media (max-width: 600px) {
+    margin: 0px 10px;
+  }
+  font-family: 'Roboto', sans-serif;  
+  font-style: normal;  
+  color: #000000;
+  padding: 0px 0 80px 0;
+  padding-left: 230px;
+  border-left: 1px solid #00000010;
+  a {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+  }
+  div {
+    font-family: 'Roboto', sans-serif;
+    padding: 0px 22px 23px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .footer_block a:hover img {
+    transform: scale(1.1);
+  }
+}

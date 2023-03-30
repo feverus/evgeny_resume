@@ -1,0 +1,90 @@
+@import '../../global.modules.scss';
+
+.NUMBER_FONT {
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.my_works_block {
+  @media (max-width: 750px) {
+    margin-left: 0px;
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: min(480px, 90vw);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: #FFFFFF;
+      .number div {
+        color: #ECEAF3; 
+      }
+    }
+  }
+  width: 100%;
+  display: flex;    
+  margin-left: -230px;
+  transition: color 0.5s ease;    
+  .number {
+    @media (max-width: 750px) {
+      width: 150px;
+      div {
+        padding: 22px 37px 0 60px;
+      }
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
+    width: 230px;
+    height: 100%;
+    div {
+      @extend .NUMBER_FONT;
+      width: 64px;
+      height: 58px;
+      padding: 22px 37px 0 130px;  
+      transition: color 0.5s ease;
+      color: #FFFFFF;
+    }
+  }
+  .card {
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 0 1 auto;
+    }
+    padding: 0 0 45px 0;
+    flex: 0 1 900px;
+    .name_number {
+      @media (max-width: 600px) {
+        display: flex;
+        flex: 0 0 70px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      font-family: Lato, sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 58px;     
+      color: #ECEAF3;   
+      display: none;
+    }
+    .card_a {
+      float: left;
+      padding: 0 20px 20px 0;
+      width: 265px;
+    }   
+    .tag {
+      background: #ECEAF3;
+      border-radius: 4px;   
+      padding: 5px 10px;
+      display: inline-block;
+      margin: 0 8px 10px 0;
+    }
+  }
+}

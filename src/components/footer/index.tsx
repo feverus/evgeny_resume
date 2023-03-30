@@ -1,8 +1,8 @@
 import {observer, inject} from "mobx-react";
-import {Main} from './main'
+import {Footer} from './footer'
 
 export default
 	inject('defaultStore')
-	(observer(Main));
+	(observer(Footer));
 
-export type { StateType, ApiType, UseMain } from './main.props'
+export type { StateType, ApiType, UseFooter } from './footer.props'
