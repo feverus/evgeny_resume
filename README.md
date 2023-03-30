@@ -1,7 +1,1 @@
-boilerplate
-настроены:
-
-- typeScript
-- mobX
-- sass
-- ky
+Главная страница моего сайта с резюме
