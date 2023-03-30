@@ -77,7 +77,7 @@ $a_hover_color: #736fc3;
     padding: 0 100px 0 0;
     max-width: 800px;
   }
-  .img {
+  .screenshots {
     @media (max-width: 600px) {
       width: 100%;
       margin: 0 auto 20px;
@@ -85,6 +85,8 @@ $a_hover_color: #736fc3;
       background-position: center;
       justify-content: center;
     }
+    transform: scale(0.001);
+    transform-origin: center 0;
     background-image: url('~/public/img/mobile_back.png');
     background-repeat: no-repeat;
     width: 198px;

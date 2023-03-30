@@ -1,0 +1,5 @@
+[
+    { "name": "Программы", "list": "Visual studio code / Adobe XD / Figma / Adobe Photoshop" },
+    { "name": "Языки", "list": "JavaScript / TypeScript / PHP / Delphi / 1C" },
+    { "name": "Инструменты", "list": "HTML5 / CSS3 / React JS / React Redux / mobX / LESS / SASS" }
+]

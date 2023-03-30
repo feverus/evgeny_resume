@@ -1,15 +1,28 @@
-import { WorkItemProps } from './myWorks.props';
+import { WorkItemProps } from './myWorks.props'
 import C from './myWorks.module.scss'
+
+const Block_2 = (props:{name: string, children: React.ReactNode}) => {
+    return (
+        <div className={C.column_block + ' ' + C.column_block_2}>
+            <div className={C.column_block_title}>
+                {props.name}
+            </div>
+            <div className={C.column_text}>
+                {props.children}
+            </div>
+        </div>
+    )
+}
 
 export default function WorkItem(props: { data: WorkItemProps; index: number; }) {
     return (
         <div className={C.my_works_block}>
             <div className={C.number}>
-                <div>{props.index}</div>
+                <div>{props.index + 1}</div>
             </div>
             <div className={C.card}>
                 <div className={C.name}>
-                    <div className={C.name_number}>{props.index}</div>
+                    <div className={C.name_number}>{props.index + 1}</div>
                     <div>{props.data.name}</div>
                 </div>
                 <div className={C.text}
@@ -18,23 +31,14 @@ export default function WorkItem(props: { data: WorkItemProps; index: number; })
                 </div>
 
                 <div className={C.column}>
-                    <div className={C.column_block + ' ' + C.column_block_2}>
-                        <div className={C.column_block_title}>
-                            Платформа
-                        </div>
-                        <div className={C.column_text}>
-                            {props.data.platform}
-                        </div>
-                    </div>
-                    <div className={C.column_block + ' ' + C.column_block_2}>
-                        <div className={C.column_block_title}>
-                            Технологии
-                        </div>
-                        <div className={C.column_text}>
-                            {props.data.tech.map((item) => <div className={C.tag} key={props.index + '_tech_' + item}>{item}</div>
-                            )}
-                        </div>
-                    </div>
+                    <Block_2 name={'Платформа'}>
+                        {props.data.platform}
+                    </Block_2>
+                    <Block_2 name={'Технологии'}>
+                        {props.data.tech.map((item) => 
+                            <div className={C.tag} key={props.index + '_tech_' + item}>{item}</div>
+                        )}
+                    </Block_2>
                 </div>
 
                 <a target="_blank" href={props.data.link} className={C.card_a}>
@@ -51,7 +55,7 @@ export default function WorkItem(props: { data: WorkItemProps; index: number; })
                 </a>
             </div>
 
-            <div className={C.img}>
+            <div className={C.screenshots}>
                 <a target="_blank" href={props.data.link}><img src={props.data.screenshots[0]} alt="Скриншот" /></a>
             </div>
         </div>
