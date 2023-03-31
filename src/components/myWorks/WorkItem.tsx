@@ -1,5 +1,6 @@
 import { WorkItemProps } from './myWorks.props'
 import C from './myWorks.module.scss'
+import WorkItemSwiper from './WorkItemSwiper/WorkItemSwiper'
 
 const Block_2 = (props:{name: string, children: React.ReactNode}) => {
     return (
@@ -56,7 +57,7 @@ export default function WorkItem(props: { data: WorkItemProps; index: number; })
             </div>
 
             <div className={C.screenshots}>
-                <a target="_blank" href={props.data.link}><img src={props.data.screenshots[0]} alt="Скриншот" /></a>
+                <WorkItemSwiper images={props.data.screenshots} />
             </div>
         </div>
     );

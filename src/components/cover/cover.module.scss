@@ -80,6 +80,8 @@
     position: absolute;
     top: 600px;
     z-index: 3;
-    background: none;
+    &:not(:hover) {
+      background: none;
+    }
   }
 }
