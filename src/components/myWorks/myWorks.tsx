@@ -22,16 +22,16 @@ export function MyWorks() {
 						trigger: item,
 						start: 'top 80%',
 						end: 'top 30%',
-						scrub: true,
+						scrub: 0.3,
 					},
 				})
 				gsap.to(item, {
 					opacity: '100%',
 					scrollTrigger: {
 						trigger: item,
-						start: 'top 90%',
+						start: 'top 100%',
 						end: 'top 30%',
-						scrub: true,
+						scrub: 0.3,
 					},
 				})
 			})
@@ -42,9 +42,9 @@ export function MyWorks() {
 					transform: 'rotate(0deg)',
 					scrollTrigger: {
 							trigger: item,
-							start: 'top 90%',
+							start: 'top 80%',
 							end: 'top 40%',
-							scrub: true,
+							scrub: 0.3,
 					},
 				})	
 			})

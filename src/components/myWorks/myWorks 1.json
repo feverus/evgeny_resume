@@ -1,14 +1,4 @@
 [
-  { "name": "Интерфейс для сайта Hacker News (https://news.ycombinator.com/news)",
-    "text": "<p>Проект состоит из двух страниц:</p><ul><li>Главная: показывает 100 последних новостей, автоматически обновляется раз в минуту (есть отключение обновления).</li><li>Страница новости с деревом комментариев. Дочерние комментарии подгружаются при клике по родительскому. Также есть автообновление.</li></ul><p>Анимации с gsap. <s>SPA написано с использованием фреймворка Remix.run (server side rendering) и развернуто в docker.</s> Переписано на стандартный вариант без бэкенда. Ссылка на старую версию на гитхабе.</p>",
-    "platform": "Web / SSR", 
-    "tech": [
-      "Docker", "JavaScript", "TypeScript", "React", "mobX", "remix-run", "gsap", "react-svg", "react-transition-group", "sass"
-    ],
-    "link": "https://evgeny.lol/hacker-news-lite/",
-    "git_link": "feverus/hacker-news-lite",
-    "screenshots": ["img/hacker_news.jpg", "img/hacker_news_1.jpg", "img/hacker_news_2.jpg"]
-  },
   { "name": "Демонстрация работы с api яндекс карт",
     "text": "<p>Проект состоит из двух страниц:</p><ul><li>поиск ближайшего города из БД по введенным координатам или адресу</li><li>отображение списка объектов из БД на карте с фильтрацией.</li></ul><p>SPA развернуто в docker.</p>",
     "platform": "Web", 
