@@ -28,7 +28,7 @@ export interface WorkItemProps {
     text: string,
     platform: string,
     tech: string[],
-    link: string,
-    git_link: string,
-    screenshots: string[],
+    link?: string,
+    git_link?: string,
+    screenshots?: string[],
 }

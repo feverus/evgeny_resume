@@ -7,7 +7,7 @@ export function Footer() {
 	const [state, api] = useFooter() 
 
 	return (
-		<footer id="to_bottom">
+		<footer id="to_bottom" className={C.content}>
 				<div className={C.title}>
 						контакты
 				</div>

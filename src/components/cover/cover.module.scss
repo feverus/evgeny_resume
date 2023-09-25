@@ -20,7 +20,10 @@
   .social {
     flex: 1 0 100%;
     a:hover img {
-        transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    a>div {
+      display: inline;
     }
     .social_div {
         height: 27px;
@@ -71,6 +74,13 @@
       line-height: 30px;
       align-items: center;
       padding-bottom: 103px;
+      ul {
+        list-style-type: ">";
+        padding-left: 10px;
+        li {
+          padding-left: 10px;
+        }
+      }
     }
     .button {
       width: fit-content;
@@ -83,5 +93,36 @@
     &:not(:hover) {
       background: none;
     }
+  }
+}
+
+.blob_shell {
+  svg {
+    display: none;
+  }
+  filter:url('#goo');
+  position: relative;
+  font-size: 1em;
+  .blob_text {
+    animation: op 8s linear infinite;
+    opacity: 1;
+    filter: blur(0);
+    &:nth-child(2) {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      filter: blur(40);
+      animation: op_reverse 8s linear infinite;
+    }
+  }
+  @keyframes op {
+    30% { opacity: 1; filter: blur(0);}        
+    40%, 60% { opacity: 0; filter: blur(40);} 
+    70% { opacity: 1; filter: blur(0);}        
+  }
+  @keyframes op_reverse {
+    30% { opacity: 0; filter: blur(40);}
+    40%, 60% { opacity: 1; filter: blur(0);} 
+    70% { opacity: 0; filter: blur(40);}  
   }
 }

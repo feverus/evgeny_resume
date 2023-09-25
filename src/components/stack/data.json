@@ -1,5 +1,6 @@
 [
-    { "name": "Программы", "list": "Visual studio code / Adobe XD / Figma / Adobe Photoshop" },
-    { "name": "Языки", "list": "JavaScript / TypeScript / PHP / Delphi / 1C" },
-    { "name": "Инструменты", "list": "HTML5 / CSS3 / React JS / React Redux / mobX / LESS / SASS" }
+    { "name": "Программы", "list": "Visual studio code / Figma / Adobe XD / Adobe Photoshop" },
+    { "name": "Языки", "list": "JavaScript / TypeScript / PHP" },
+    { "name": "Frontend технологии", "list": "React / ES6 / CSS3 / Sass / HTML5 / Next.js / MobX / React Redux / Material UI / AntD etc." },
+    { "name": "Прочие технологии", "list": "Docker / Git / HTTP / REST / JSON API / MVVM / SOLID" }
 ]

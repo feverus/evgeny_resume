@@ -42,7 +42,7 @@
         padding: 22px 37px 0 60px;
       }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       display: none;
     }
     width: 230px;
@@ -54,6 +54,9 @@
       padding: 22px 37px 0 130px;  
       transition: color 0.5s ease;
       color: #FFFFFF;
+      @media (max-width: 750px) {
+        padding: 22px 37px 0 100px;  
+      }
     }
   }
   .card {
@@ -67,6 +70,24 @@
     flex: 0 1 900px;
     transform: rotate(90deg);
     transform-origin: 0 0;
+    .column {
+      @media (max-width: 750px) {
+        flex-wrap: wrap;
+        width: min(800px, calc(100% - 10px));
+      }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-top: 33px;
+      padding-bottom: 50px;
+      width: min(800px, calc(100% - 10px));
+      .column_block_title {
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 18px;
+      }
+    }
     .name_number {
       @media (max-width: 600px) {
         display: flex;

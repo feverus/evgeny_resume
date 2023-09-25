@@ -20,8 +20,8 @@ export function MyWorks() {
 					x: '0',
 					scrollTrigger: {
 						trigger: item,
-						start: 'top 80%',
-						end: 'top 30%',
+						start: 'top 99%',
+						end: 'top 60%',
 						scrub: 0.3,
 					},
 				})
@@ -29,8 +29,8 @@ export function MyWorks() {
 					opacity: '100%',
 					scrollTrigger: {
 						trigger: item,
-						start: 'top 100%',
-						end: 'top 30%',
+						start: 'top 99%',
+						end: 'top 60%',
 						scrub: 0.3,
 					},
 				})
@@ -42,8 +42,8 @@ export function MyWorks() {
 					transform: 'rotate(0deg)',
 					scrollTrigger: {
 							trigger: item,
-							start: 'top 80%',
-							end: 'top 40%',
+							start: 'top 99%',
+							end: 'top 60%',
 							scrub: 0.3,
 					},
 				})	
@@ -55,8 +55,8 @@ export function MyWorks() {
 					transform: 'scale(1) translate(0, 0)',
 					scrollTrigger: {
 							trigger: item,
-							start: 'top 70%',
-							end: 'top 30%',
+							start: 'top 99%',
+							end: 'top 50%',
 							scrub: true,
 					},
 				})	
@@ -64,8 +64,8 @@ export function MyWorks() {
 					opacity: '100%',
 					scrollTrigger: {
 						trigger: item,
-						start: 'top 50%',
-						end: 'top 30%',
+						start: 'top 70%',
+						end: 'top 60%',
 						scrub: true,
 					},
 				})
